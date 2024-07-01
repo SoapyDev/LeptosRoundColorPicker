@@ -1,0 +1,16 @@
+[package]
+name = "color_picker"
+version = "0.1.0"
+edition = "2021"
+authors = ["SoapyDev"]
+
+[dependencies]
+leptos-use = { version = "^0.10.10" }
+leptos = { version = "^0.6", features = ["csr"] }
+
+
+[profile.release]
+opt-level = 'z'
+lto = true
+codegen-units = 1
+panic = "abort"

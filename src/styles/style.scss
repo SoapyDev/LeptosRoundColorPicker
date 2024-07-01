@@ -1,0 +1,146 @@
+$sqare: 2rem;
+$min-size: 100px;
+$max-size: 400px;
+
+
+.column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	width: 100%;
+	height: 100%;
+}
+
+.color-picker-container {
+	position: relative;
+	width: 20vw;
+	min-width: $min-size;
+	max-width: $max-size;
+	height: 20vw;
+	min-height: $min-size;
+	max-height: $max-size;
+}
+
+.color-block {
+	width: $sqare;
+	height: $sqare;
+	background: transparent;
+	border: 1px solid var(--gray-7);
+	border-radius: var(--radius-2);
+	box-shadow: none;
+	margin: 0;
+	padding: 0;
+}
+
+.color-list {
+	display: flex;
+	flex-flow: row nowrap;
+	list-style: none;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 0.5rem;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+}
+
+.color-element {
+	padding: 0;
+	margin: 0;
+}
+
+.base-color-ring {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	position: relative;
+}
+
+.ring-handle {
+	position: absolute;
+	background: #ffffff;
+	width: 3%;
+	height: 3%;
+	transform: translate3d(-25%, -25%, 0);
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.color-ring {
+	border-radius: 50%;
+	width: 92.5%;
+	height: 92.5%;
+	position: absolute;
+	top: 3.5%;
+	left: 3.5%;
+}
+
+.color-ring:before {
+	content: "";
+	border-radius: 50%;
+	background: var(--gray-9);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.color-ring-container {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 5%;
+	left: 0;
+}
+
+
+.color-circle {
+	width: 90%;
+	height: 90%;
+	border-radius: 50%;
+	margin: 0 auto;
+	position: relative;
+	cursor: pointer;
+	min-width: $min-size;
+	max-width: $max-size;
+	min-height: $min-size;
+	max-height: $max-size;
+	background: radial-gradient(#808080, transparent 80%),
+		conic-gradient(#e43f00, #fae410, #55cc3b, #09adff, #6b0efd, #e70d86, #e43f00);
+}
+
+.color-handle {
+	width: 40px;
+	height: 40px;
+	border-radius: 0 50% 50% 50%;
+	background: var(--gray-7);
+	cursor: pointer;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.color-handle-inner {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.save-color-button {
+	width: $sqare;
+	height: $sqare;
+	padding: 0;
+	margin: 0;
+
+	svg {
+		width: 100%;
+		height: 100%;
+		fill: var(--gray-1);
+	}
+}
